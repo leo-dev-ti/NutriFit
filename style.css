@@ -167,10 +167,6 @@ footer *
 
 
 @media (max-width: 1000px) {
-  body
-  {
-    font-size: 20px;
-  }
   header div
   {
     display: none;
