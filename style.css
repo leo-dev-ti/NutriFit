@@ -1,191 +1,88 @@
-:root
-{
-  --primary-color: #FEFAE0;
-  --secondary-color: #B99470;
-  --background-1-color: #A6B37D;
-  --background-2-color: #C0C78C;
-}
-
 *
 {
-  box-sizing: border-box;
-  font-family: Arial;
-  color: var(--primary-color);
-  font-style: none;
-  
-  scroll-behavior: smooth;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: Arial;
+    padding: 0;
+    margin: 0;
 }
 
-body,html
+html,body
 {
-  padding: 0;
-  margin: 0;
+    background-color: #000;
+    overflow-x: hidden;
+    background-image: url(images/background.jpg);
+    background-size: cover;
 }
 
 header
 {
-  position: fixed;
-  width: 100%;
-  
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--background-1-color);
-  align-items: center;
-  
-  padding: 10px 20px;
-  box-shadow: 0px 0px 5px #0005;
-  z-index: 100;
-}
+    background-image: url(images/banner.jpg);
+    background-size: cover;
+    height: 100vh;
 
-header ul
-{
-  display: flex;
-  list-style: none;
-  padding: 0;
-  gap: 10px;
-}
-
-header div a
-{
-  border: 3px solid var(--primary-color);
-  padding: 10px 20px;
-  cursor: pointer;
-  text-decoration: none;
-  
-  transition: .2s;
-}
-
-header div a:hover
-{
-  background-color: var(--background-2-color);
-}
-
-header div a:active
-{
-  color: var(--secondary-color);
-  background-color: var(--primary-color);
-}
-
-
-
-main section *
-{
-  margin: 0;
-  padding: 0;
-}
-
-main section[id="home"]
-{
-  background-image: url('images/home-banner.jpg');
-  background-size: cover;
-  height: 100vh;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-main section[id="home"] #credit
-{
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-}
-
-main section[id="home"] *
-{
-  text-shadow: 0px 0px 5px #000a;
-}
-
-main section[id="home"] h1
-{
-  font-size: 120px;
-  text-decoration: underline;
-}
-
-
-main section[id="why-us"]
-{
-  display: flex;
-  background-color: var(--background-2-color);
-  justify-content: space-around;
-  padding: 60px 20px;
-}
-
-main section[id="why-us"] .card-item
-{
-  text-align: center;
-}
-
-
-main section[id="contact-us"]
-{
-  padding: 50px;
-  background-color: var(--background-1-color);
-}
-
-main section[id="contact-us"] h1
-{
-  text-align: center;
-}
-
-main section[id="contact-us"] p
-{
-  margin-bottom: 20px;
-}
-
-main section[id="contact-us"] ul
-{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-}
-
-main section[id="contact-us"] ul li
-{
-  font-size: 20px;
-}
-
-
-footer
-{
-  background-color: var(--background-2-color);
-  padding: 10px;
-}
-
-footer *
-{
-  margin: 0;
-  padding: 0;
-}
-
-
-
-
-@media (max-width: 1000px) {
-  header div
-  {
-    display: none;
-  }
-  
-  header
-  {
-    justify-content: center;
-  }
-  
-  main section[id="why-us"]
-  {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1,header h4
+{
+    width: 100vw;
+    background-color: #0007;
+    text-align: center;
+
+    padding: 5px;
+    backdrop-filter: blur(4px);
+}
+
+header h1
+{
+    font-size: 50px;
+}
+
+header #credits
+{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+
+
+#sections
+{
+    position: sticky;
+    width: 100%;
+    background-color: #14003d;
+}
+
+#sections ul
+{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+#sections ul a
+{
     padding: 20px;
-    gap: 20px;
-  }
-  
-  main section[id="why-us"] .card-item
-  {
-    padding: 50px;
-  }
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    transition: .2s;
+}
+
+#sections ul a:hover
+{
+    background-color: #b10bd6;
+}
+
+section img
+{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    background-position-y: 50px;
 }
